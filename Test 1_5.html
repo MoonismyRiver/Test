@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cạnh tam giác</title>
+</head>
+<body>
+<h2>Đây là cạnh của tam giác? </h2>
+
+Nhập cạnh 1 vào ô: <input id="number" type="number">
+<br><br>
+Nhập cạnh 2 vào ô: <input id="number2" type="number"><br><br>
+
+Nhập cạnh 3 vào ô: <input id="number3" type="number"><br><br>
+
+<button id="submit" onclick="tinhtoan()">Hiển thị kết quả</button>
+<br>
+: <p id="tamgiac"></p>
+
+<script>
+    function tinhtoan() {
+        let a = +document.getElementById("number").value;
+        let b = +document.getElementById("number2").value;
+        let c = +document.getElementById("number3").value;
+        if (((a + b) > c) && ((b + c) > a) && ((a + c) > b)) {
+            document.getElementById("tamgiac").innerHTML = ("đây là 3 cạnh của tam giác");
+            if ((a === b) && (a === c)) {
+                document.getElementById("tamgiac").innerHTML = ("đây là 3 cạnh của tam giác đều");
+
+            } else if ((a === b) || (b === c) || (c === a)) {
+                document.getElementById("tamgiac").innerHTML = ("đây là 3 cạnh của tam giác cân");
+            } else if ((a*a)){
+
+            }
+
+                } else {
+            document.getElementById("tamgiac").innerHTML = ("đây không phải là 3 cạnh của tam giác");
+        }
+    }
+</script>
+
+
+</body>
+</html>
