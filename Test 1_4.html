@@ -2,24 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Năm tháng</title>
+    <title>Xây dựng lớp hình chữ nhật</title>
 </head>
 <body>
-<h2>Thế kỉ thứ mấy? </h2>
-
-Nhập năm vào ô: <input id="number" type="number">
-<button id="submit" onclick="tinhtoan()">Hiển thị kết quả</button>
-<br>
-Đó là thế kỉ thứ : <p id="theki"></p>
 <script>
-    function tinhtoan() {
-        let a = +document.getElementById("number").value;
-        let C=parseInt(a/100)+1;
+    <canvas id='chunhat'></canvas>
+    class Rectangle {
+        chieudai
+        chieurong
 
-        document.getElementById("theki").innerHTML=(C);
-
+        constructor(chieudai, chieurong) {
+            this.chuvi =  (chieudai + chieurong ) * 2
+            this.dientich = chieudai * chieurong
+        }
     }
-</script>
 
+    let retangle = new Rectangle(6, 6);
+    alert(retangle.chuvi);
+</script>
 </body>
 </html>

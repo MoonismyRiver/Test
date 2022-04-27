@@ -2,27 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Tính tổng các số từ a đến b</title>
+    <title>Kiểm tra mảng</title>
 </head>
 <body>
-Nhập số thứ nhất vào ô: <input id="number" type="number">
-<br><br>
-Nhập số thứ 2 vào ô: <input id="number2" type="number"><br><br>
-
-<button id="submit" onclick="tinhtoan()">Hiển thị kết quả</button>
-<br><br>
-Kết quả là : <p id="ketqua"></p>
-
 <script>
 
-    function tinhtoan() {
-        let a = +document.getElementById("number").value;
-        let b = +document.getElementById("number2").value;
-                    let S = (a + b) * (b - a + 1) / 2;
-            document.getElementById("ketqua").innerHTML = (S);
-
-
+    function checkin(arr1, arr2) {
+        let count = 0;
+        let check = false;
+        if (arr2.length > arr1.length) {
+            alert('chuỗi 2 dài hơn chuỗi 1');
+        } else {
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1[i] == arr2[count]) {
+                    count++;
+                } else {
+                    if (arr1[i] == arr2[0]) {
+                        count = 1;
+                    } else {
+                        count == 0;
+                    }
+                }
+            }
+            if (count == arr2.length) {
+                alert("chuỗi 2 nằm trong chuỗi 1");
+            } else {
+                alert('chuỗi 2 không nằm trong chuỗi 1');
+            }
+        }
     }
+
+
+    checkin('ttoikhongco', 'to')
+
+
 </script>
 </body>
 </html>
